@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   FileSpreadsheet, Award, CreditCard, UserCheck, Briefcase, Calendar, Mail, 
   Database, Search, ArrowRightLeft, Settings, LogOut, LayoutDashboard, Users,
-  Info
+  Info, Laptop
 } from 'lucide-react';
 
 // Import Types and Constants
@@ -33,8 +33,9 @@ import { RolloverSystem } from './components/RolloverSystem';
 import { SettingsPanel } from './components/SettingsPanel';
 import { BackupSystem } from './components/BackupSystem';
 import { AboutProgram } from './components/AboutProgram';
+import { DesktopInstaller } from './components/DesktopInstaller';
 
-type TabType = 'grades_sheet' | 'results_sheet' | 'report_cards' | 'teachers_info' | 'staff_info' | 'schedule_allocations' | 'letter_generator' | 'data_entry' | 'rollover' | 'search' | 'settings' | 'backup' | 'about_program';
+type TabType = 'grades_sheet' | 'results_sheet' | 'report_cards' | 'teachers_info' | 'staff_info' | 'schedule_allocations' | 'letter_generator' | 'data_entry' | 'rollover' | 'search' | 'settings' | 'backup' | 'about_program' | 'desktop_app';
 
 const DASHBOARD_MODULES = [
   {
@@ -144,6 +145,15 @@ const DASHBOARD_MODULES = [
     badge: 'دعم وأرشفة البيانات',
     color: 'from-emerald-600 to-teal-800',
     highlightColor: 'rgba(16, 185, 129, 0.45)'
+  },
+  {
+    id: 'desktop_app' as TabType,
+    title: 'تنزيل وتثبيت نسخة سطح المكتب (EXE)',
+    description: 'دليل شامل لتثبيت المنصة كبرنامج مستقل على شاشة حاسوبك الشخصي وتوليد ملف EXE مستقل كبقية البرامج.',
+    icon: Laptop,
+    badge: 'برنامج سطح المكتب',
+    color: 'from-blue-600 to-indigo-700',
+    highlightColor: 'rgba(59, 130, 246, 0.45)'
   },
   {
     id: 'about_program' as TabType,
@@ -642,6 +652,9 @@ export default function App() {
                 {activeTab === 'about_program' && (
                   <AboutProgram />
                 )}
+                {activeTab === 'desktop_app' && (
+                  <DesktopInstaller />
+                )}
               </main>
 
             </div>
@@ -810,6 +823,18 @@ export default function App() {
               </button>
 
               <button
+                onClick={() => setActiveTab('desktop_app')}
+                className={`w-full text-right py-3 px-4 rounded-xl font-bold transition-all flex items-center gap-3 cursor-pointer ${
+                  activeTab === 'desktop_app' 
+                    ? 'bg-emerald-700 text-white shadow-md shadow-emerald-700/10' 
+                    : 'bg-white hover:bg-slate-50 text-slate-700 hover:text-emerald-800'
+                }`}
+              >
+                <Laptop className="h-4.5 w-4.5" />
+                <span>تنزيل وتثبيت نسخة سطح المكتب (EXE)</span>
+              </button>
+
+              <button
                 onClick={() => setActiveTab('about_program')}
                 className={`w-full text-right py-3 px-4 rounded-xl font-bold transition-all flex items-center gap-3 cursor-pointer ${
                   activeTab === 'about_program' 
@@ -934,6 +959,9 @@ export default function App() {
             )}
             {activeTab === 'about_program' && (
               <AboutProgram />
+            )}
+            {activeTab === 'desktop_app' && (
+              <DesktopInstaller />
             )}
           </main>
 
