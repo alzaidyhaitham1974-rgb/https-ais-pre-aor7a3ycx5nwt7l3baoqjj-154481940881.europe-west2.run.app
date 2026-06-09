@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500;750&display=swap');
+}
+
+/* 🪐 Premium "Royal Emerald & Gold Aurora" Theme Override Engine */
+.theme-scientific-3d {
+  background-color: #f3f7f5 !important;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(16, 185, 129, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(13, 148, 136, 0.03) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: #1e293b;
+  font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphic Silk Cards with fine Gold & Emerald highlights */
+.theme-scientific-3d .bg-white,
+.theme-scientific-3d aside,
+.theme-scientific-3d main > div,
+.theme-scientific-3d .card-3d-glow {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(16, 185, 129, 0.16) !important;
+  border-top: 3.5px solid rgba(245, 158, 11, 0.45) !important; /* Elegant golden top line */
+  border-bottom: 1.5px solid rgba(16, 185, 129, 0.1) !important;
+  box-shadow: 
+    0 10px 30px -5px rgba(16, 185, 129, 0.05),
+    0 4px 12px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(255, 255, 255, 0.9) inset !important;
+  border-radius: 1.25rem !important;
+  color: #1e293b !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.theme-scientific-3d .bg-white:hover,
+.theme-scientific-3d aside:hover,
+.theme-scientific-3d main > div:hover {
+  transform: translateY(-3px) translateZ(0) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 
+    0 20px 40px -8px rgba(16, 185, 129, 0.1), 
+    0 0 25px rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Typography & Text color safety adaptions for dark mode */
+.theme-scientific-3d h2,
+.theme-scientific-3d h3 {
+  color: #064e3b !important;
+  background: linear-gradient(135deg, #064e3b 60%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 850 !important;
+}
+
+.theme-scientific-3d h2.login-school-title {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #ffffff 65%, #fcd34d 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+  font-weight: 900 !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35)) !important;
+}
+
+.theme-scientific-3d .text-slate-900,
+.theme-scientific-3d .text-gray-900 {
+  color: #064e3b !important;
+}
+
+.theme-scientific-3d .text-slate-850,
+.theme-scientific-3d .text-slate-800,
+.theme-scientific-3d .text-slate-705,
+.theme-scientific-3d .text-slate-700,
+.theme-scientific-3d .text-slate-650,
+.theme-scientific-3d .text-slate-600,
+.theme-scientific-3d .text-gray-755,
+.theme-scientific-3d .text-gray-700,
+.theme-scientific-3d .text-gray-650,
+.theme-scientific-3d .text-gray-600,
+.theme-scientific-3d .text-slate-700.text-justify {
+  color: #334155 !important;
+}
+
+.theme-scientific-3d .text-slate-500,
+.theme-scientific-3d .text-slate-400,
+.theme-scientific-3d .text-gray-500,
+.theme-scientific-3d .text-gray-400,
+.theme-scientific-3d .text-slate-550 {
+  color: #64748b !important;
+}
+
+.theme-scientific-3d .border-slate-100,
+.theme-scientific-3d .border-slate-150,
+.theme-scientific-3d .border-slate-200,
+.theme-scientific-3d .border-gray-100,
+.theme-scientific-3d .border-gray-200 {
+  border-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+/* 🏷️ Silk Emerald Buttons in Sidebar with Golden Accents */
+.theme-scientific-3d aside nav button {
+  background: linear-gradient(135deg, #ffffff, #f0fdf4) !important;
+  border: 1px solid rgba(16, 185, 129, 0.15) !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.theme-scientific-3d aside nav button:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 
+    0 4px 12px rgba(16, 185, 129, 0.08) !important;
+  color: #064e3b !important;
+}
+
+/* Active Gold and Emerald Glow for selected tabs */
+.theme-scientific-3d aside nav button.active-theme-state,
+.theme-scientific-3d aside nav button[class*="bg-emerald-700"] {
+  background: linear-gradient(135deg, #10b981 0%, #0d9488 40%, #f59e0b 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  color: #ffffff !important;
+  box-shadow: 
+    0 8px 16px rgba(16, 185, 129, 0.15), 
+    0 1px 2px rgba(255,255,255,0.2) inset !important;
+  font-weight: 800 !important;
+}
+
+.theme-scientific-3d aside nav button.bg-white,
+.theme-scientific-3d aside nav button[class*="bg-white"] {
+  background: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.1) !important;
+  color: #475569 !important;
+}
+
+/* Status Cards & Secondary blocks formatting */
+.theme-scientific-3d .bg-slate-50,
+.theme-scientific-3d .bg-gray-50,
+.theme-scientific-3d .bg-slate-100\/50,
+.theme-scientific-3d .bg-emerald-50\/10,
+.theme-scientific-3d .bg-emerald-50\/70,
+.theme-scientific-3d .bg-amber-50\/70 {
+  background: #f7faf8 !important;
+  border: 1px solid rgba(16, 185, 129, 0.12) !important;
+  box-shadow: inset 0 1px 3px rgba(16, 185, 129, 0.02) !important;
+  color: #334155 !important;
+}
+
+.theme-scientific-3d .bg-slate-50 span, 
+.theme-scientific-3d .bg-slate-50 strong {
+  color: #1e293b !important;
+}
+
+.theme-scientific-3d .bg-slate-50 .font-mono {
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #059669 !important;
+  border: 1px solid rgba(16, 185, 129, 0.18) !important;
+}
+
+/* Interactive inputs / Search bars */
+.theme-scientific-3d input,
+.theme-scientific-3d select,
+.theme-scientific-3d textarea {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  color: #0f172a !important;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.03) !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.theme-scientific-3d input:focus,
+.theme-scientific-3d select:focus,
+.theme-scientific-3d textarea:focus {
+  border-color: #d97706 !important; /* Elegant focus warm gold */
+  box-shadow: 
+    0 0 10px rgba(245, 158, 11, 0.15) !important;
+  outline: none !important;
+}
+
+/* Tables & Data Sheets */
+.theme-scientific-3d table {
+  border-collapse: separate !important;
+  border-spacing: 0 4px !important;
+}
+
+.theme-scientific-3d thead tr,
+.theme-scientific-3d th {
+  background: linear-gradient(180deg, #f0fdf4, #ecfdf5) !important;
+  color: #065f46 !important;
+  border-bottom: 2px solid rgba(245, 158, 11, 0.3) !important;
+  font-weight: 850 !important;
+}
+
+.theme-scientific-3d tbody tr {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(16, 185, 129, 0.06) !important;
+  transition: all 0.2s ease !important;
+}
+
+.theme-scientific-3d tbody tr:hover {
+  background: rgba(16, 185, 129, 0.04) !important;
+  transform: translateY(-1px) scale(1.001);
+  box-shadow: 
+    0 4px 12px rgba(16, 185, 129, 0.05) !important;
+}
+
+.theme-scientific-3d td {
+  border-top: 1px solid rgba(16, 185, 129, 0.03) !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.03) !important;
+  color: #1e293b !important;
+}
+
+/* Masterfully-designed Modals & Dialog overlays */
+.theme-scientific-3d .fixed.inset-0.bg-black\/50,
+.theme-scientific-3d .fixed.inset-0.bg-slate-900\/50,
+.theme-scientific-3d .bg-black\/50 {
+  background-color: rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Custom premium scrollbar */
+.theme-scientific-3d ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-scientific-3d ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.theme-scientific-3d ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fbbf24, #34d399);
+  border-radius: 4px;
+}
+
+.theme-scientific-3d ::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Hover scales and modern elements decoration */
+.theme-scientific-3d .shadow-sm {
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.04) !important;
+}
+
+/* Status Badges */
+.theme-scientific-3d .bg-emerald-150,
+.theme-scientific-3d .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+  color: #065f46 !important;
+  border: 1px solid rgba(16, 185, 129, 0.15) !important;
+}
+
+.theme-scientific-3d .bg-rose-100 {
+  background-color: rgba(244, 63, 94, 0.08) !important;
+  color: #9f1239 !important;
+  border: 1px solid rgba(244, 63, 94, 0.15) !important;
+}
+
+.theme-scientific-3d .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+  color: #1e40af !important;
+  border: 1px solid rgba(59, 130, 246, 0.15) !important;
+}
+
+.theme-scientific-3d .bg-amber-100 {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(245, 158, 11, 0.15) !important;
+}
+
+/* Fine-tuned Hover lifts */
+@media (min-width: 1024px) {
+  .theme-scientific-3d .hover-lift-3d:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.06);
+  }
+}
+
+/* 🚨 Special high-priority overrides for Red/Fail indicators and Decision applied scores to override the Emerald theme */
+.theme-scientific-3d .text-red-600,
+.theme-scientific-3d .text-red-700,
+.theme-scientific-3d .text-rose-600,
+.theme-scientific-3d .text-rose-700,
+.theme-scientific-3d .text-red-650,
+.theme-scientific-3d td.text-red-600,
+.theme-scientific-3d td.text-rose-600,
+.theme-scientific-3d td.text-red-650,
+.theme-scientific-3d .font-bold.text-red-700,
+.theme-scientific-3d .font-bold.text-rose-700,
+.theme-scientific-3d span.text-red-600,
+.theme-scientific-3d span.text-rose-600,
+.theme-scientific-3d span.text-rose-805,
+.theme-scientific-3d .bg-rose-105 {
+  color: #dc2626 !important;
+}
+
+.theme-scientific-3d td[style*="color: #dc2626"],
+.theme-scientific-3d td[style*="color: #b91c1c"],
+.theme-scientific-3d span[style*="color: #dc2626"],
+.theme-scientific-3d span[style*="color: #b91c1c"],
+.theme-scientific-3d td[style*="color: rgb(220, 38, 38)"],
+.theme-scientific-3d td[style*="color: rgb(185, 28, 28)"],
+.theme-scientific-3d span[style*="color: rgb(220, 38, 38)"],
+.theme-scientific-3d span[style*="color: rgb(185, 28, 28)"] {
+  color: #dc2626 !important;
+}
+
+.theme-scientific-3d .bg-red-50,
+.theme-scientific-3d .bg-red-50\/20,
+.theme-scientific-3d .bg-red-50\/30,
+.theme-scientific-3d .bg-red-50\/50,
+.theme-scientific-3d .bg-rose-50\/20,
+.theme-scientific-3d .bg-rose-50\/30,
+.theme-scientific-3d .bg-rose-50\/50 {
+  background-color: rgba(254, 242, 242, 0.95) !important;
+  color: #dc2626 !important;
+}
+
+.theme-scientific-3d .bg-red-100,
+.theme-scientific-3d .bg-red-100\/90,
+.theme-scientific-3d .bg-rose-100\/90,
+.theme-scientific-3d span.bg-rose-105,
+.theme-scientific-3d span[style*="background-color: #fee2e2"],
+.theme-scientific-3d span[style*="background-color: rgb(254, 226, 226)"] {
+  background-color: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+  color: #dc2626 !important;
+}

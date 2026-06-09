@@ -1,0 +1,6 @@
+{
+  "name": "إدارة الإعدادية المركزية للبنين",
+  "description": "منصة شاملة لإدارة درجات الطلاب، بطاقات النتائج، معلومات المدرسين والموظفين، منشئ المخاطبات الرسمية، وتوزيع الحصص.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

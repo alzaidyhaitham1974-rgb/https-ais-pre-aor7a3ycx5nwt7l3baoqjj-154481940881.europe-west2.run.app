@@ -1,0 +1,17 @@
+{
+  "name": "منصة الإدارة التربوية المتكاملة / إعداد الأستاذ هيثم برزان الزيدي",
+  "short_name": "المنصة التربوية",
+  "description": "منصة وطنية متكاملة لإدارة شيتات الدرجات، تنظيم اللوائح الطلابية والكوادر التدريسية، وإصدار الكتب المدرسية الرسمية.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/src/assets/images/school_logo_official_1780921501892.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

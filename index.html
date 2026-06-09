@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الإدارة التربوية المتكاملة / إعداد الأستاذ هيثم برزان الزيدي</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#064e3b" />
+    <link rel="apple-touch-icon" href="/src/assets/images/school_logo_official_1780921501892.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.log('SW registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
+
